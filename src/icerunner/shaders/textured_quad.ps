@@ -1,0 +1,14 @@
+Texture2D inputTexture;
+SamplerState inputSampler;
+
+struct VSOutput
+{
+    float4 position : SV_POSITION;
+    float2 uv : TEXCOORD;
+};
+
+float4 main(VSOutput input) : SV_TARGET
+{
+    //return float4(1, 1, 1, 1);
+    return inputTexture.Sample(inputSampler, input.uv);
+}

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7F390E1F-3623-3D9D-A6BA-587E7CEAB431}</ProjectGuid>
+    <RootNamespace>icerunner</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>icerunner</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>icerunner</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">icerunner</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">false</LinkIncremental>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">icerunner</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\middleware\SDL2-2.0.4\include;..\middleware\SDL2_ttf-2.0.14-VC\include;..\middleware\SDL2_image-2.0.1-VC\include;..\middleware\SDL2_mixer-2.0.1-VC\include;..\middleware\lua53DLL\include;..\middleware\glm;C:\Qt\5.7\msvc2015_64\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\middleware\SDL2-2.0.4\lib\x64\SDL2main.lib;..\middleware\SDL2-2.0.4\lib\x64\SDL2.lib;..\middleware\SDL2_ttf-2.0.14-VC\lib\x64\SDL2_ttf.lib;..\middleware\SDL2_image-2.0.1-VC\lib\x64\SDL2_image.lib;..\middleware\SDL2_mixer-2.0.1-VC\lib\x64\SDL2_mixer.lib;..\middleware\lua53DLL\lua53.lib;XInput.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\middleware\SDL2-2.0.4\lib\x64;..\middleware\SDL2_ttf-2.0.14-VC\lib\x64;..\middleware\SDL2_image-2.0.1-VC\lib\x64;..\middleware\SDL2_mixer-2.0.1-VC\lib\x64;..\middleware\lua53DLL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\icerunner.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\middleware\SDL2-2.0.4\include;..\middleware\SDL2_ttf-2.0.14-VC\include;..\middleware\SDL2_image-2.0.1-VC\include;..\middleware\SDL2_mixer-2.0.1-VC\include;..\middleware\lua53DLL\include;..\middleware\glm;C:\Qt\5.7\msvc2015_64\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\middleware\SDL2-2.0.4\lib\x64\SDL2main.lib;..\middleware\SDL2-2.0.4\lib\x64\SDL2.lib;..\middleware\SDL2_ttf-2.0.14-VC\lib\x64\SDL2_ttf.lib;..\middleware\SDL2_image-2.0.1-VC\lib\x64\SDL2_image.lib;..\middleware\SDL2_mixer-2.0.1-VC\lib\x64\SDL2_mixer.lib;..\middleware\lua53DLL\lua53.lib;XInput.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\middleware\SDL2-2.0.4\lib\x64;..\middleware\SDL2_ttf-2.0.14-VC\lib\x64;..\middleware\SDL2_image-2.0.1-VC\lib\x64;..\middleware\SDL2_mixer-2.0.1-VC\lib\x64;..\middleware\lua53DLL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\icerunner.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="game\background.cpp" />
+    <ClCompile Include="game\deckchoosingsubstate.cpp" />
+    <ClCompile Include="game\deckloader.cpp" />
+    <ClCompile Include="rendering\displaymanager.cpp" />
+    <ClCompile Include="game\dj.cpp" />
+    <ClCompile Include="rendering\dx11constantbuffer.cpp" />
+    <ClCompile Include="rendering\dx11geometry.cpp" />
+    <ClCompile Include="rendering\dx11renderer.cpp" />
+    <ClCompile Include="rendering\dx11resourceloader.cpp" />
+    <ClCompile Include="rendering\dx11shader.cpp" />
+    <ClCompile Include="rendering\dx11texture.cpp" />
+    <ClCompile Include="sound\effect.cpp" />
+    <ClCompile Include="events\eventmanager.cpp" />
+    <ClCompile Include="game\gamemanager.cpp" />
+    <ClCompile Include="events\hidmanager.cpp" />
+    <ClCompile Include="game\luainterface.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="game\mainmenuresourcemanager.cpp" />
+    <ClCompile Include="game\mainmenustate.cpp" />
+    <ClCompile Include="game\maprenderer.cpp" />
+    <ClCompile Include="game\maptestingresourcemanager.cpp" />
+    <ClCompile Include="game\maptestingstate.cpp" />
+    <ClCompile Include="game\menu.cpp" />
+    <ClCompile Include="sound\music.cpp" />
+    <ClCompile Include="game\racingresourcemanager.cpp" />
+    <ClCompile Include="game\racingstate.cpp" />
+    <ClCompile Include="game\racingsubstate.cpp" />
+    <ClCompile Include="sound\resourceloader.cpp" />
+    <ClCompile Include="game\resourcemanager.cpp" />
+    <ClCompile Include="game\resultssubstate.cpp" />
+    <ClCompile Include="physics\scene.cpp" />
+    <ClCompile Include="sound\soundmanager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="rendering\comptrhack.hpp" />
+    <ClInclude Include="core\constants.hpp" />
+    <ClInclude Include="game\constants.hpp" />
+    <ClInclude Include="game\deckettings.hpp" />
+    <ClInclude Include="game\deckloader.h" />
+    <ClInclude Include="rendering\displaymanager.h" />
+    <ClInclude Include="game\dj.h" />
+    <ClInclude Include="rendering\dx11fwd.hpp" />
+    <ClInclude Include="rendering\dx11renderer.h" />
+    <ClInclude Include="rendering\dx11structs.h" />
+    <ClInclude Include="core\engine.hpp" />
+    <ClInclude Include="events\eventfwd.hpp" />
+    <ClInclude Include="events\eventmanager.h" />
+    <ClInclude Include="events\eventstructs.hpp" />
+    <ClInclude Include="rendering\fwd.hpp" />
+    <ClInclude Include="game\game.h" />
+    <ClInclude Include="game\gamemanager.h" />
+    <ClInclude Include="game\gamerenderstructs.hpp" />
+    <ClInclude Include="game\gamestate.hpp" />
+    <ClInclude Include="game\gamestates.hpp" />
+    <ClInclude Include="events\hidmanager.h" />
+    <ClInclude Include="game\luainterface.h" />
+    <ClInclude Include="game\map.hpp" />
+    <ClInclude Include="game\mapfactory.hpp" />
+    <ClInclude Include="game\mapkit.hpp" />
+    <ClInclude Include="game\maprenderer.h" />
+    <ClInclude Include="game\maptools.hpp" />
+    <ClInclude Include="game\maputility.hpp" />
+    <ClInclude Include="physics\physicsmanager.h" />
+    <ClInclude Include="physics\physicsstructs.hpp" />
+    <ClInclude Include="game\racingsubstates.hpp" />
+    <ClInclude Include="game\resourcemanager.h" />
+    <ClInclude Include="sound\soundfwd.hpp" />
+    <ClInclude Include="sound\soundmanager.h" />
+    <ClInclude Include="sound\soundstructs.hpp" />
+    <ClInclude Include="game\types.hpp" />
+    <ClInclude Include="core\utility.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

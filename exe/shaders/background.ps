@@ -1,0 +1,13 @@
+cbuffer PSConstBuffer
+{
+    float4 color : COLOR0;
+    float4 phaseShift : COLOR1; 
+};
+
+float4 main(float4 position: SV_POSITION) : SV_TARGET
+{
+    //return lerp(float4(0, .85, 85, 1), float4(1, 1, 1, 1), min(.6, sin((position.y + position.x + 100)*.0099)));
+    //return lerp(float4(.5, 0, .7, 1), float4(1, 1, 1, 1), min(.8, sin((position.y + position.x + 100)*.0099)));
+    
+    return lerp(color, float4(1, 1, 1, 1), min(.8, sin(((position.y/720)*600 + (position.x/1280)*800 + phaseShift[0])*.0099)));
+}
